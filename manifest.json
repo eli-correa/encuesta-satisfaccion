@@ -1,0 +1,21 @@
+{
+  "name": "Encuesta de Satisfacción Cliente",
+  "short_name": "Encuesta",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0056b3",
+  "description": "Una aplicación de encuesta de satisfacción para clientes.",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

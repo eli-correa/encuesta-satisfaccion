@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container, .stats-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px; /* Ajustado para que las imágenes quepan bien */
+    width: 100%;
+}
+
+h1 {
+    color: #0056b3;
+    margin-bottom: 40px;
+}
+
+.emojis {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px 0; /* Añadido padding para que las imágenes no queden pegadas */
+}
+
+.emoji {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    padding: 0;
+    width: 180px;  /* Ancho fijo para las imágenes de emoji */
+    height: 180px; /* Alto fijo para las imágenes de emoji */
+    background-size: contain; /* Asegura que la imagen se ajuste dentro del botón */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.emoji:hover {
+    transform: scale(1.05); /* Escala un poco menos para imágenes */
+}
+
+/* Estilos para las caritas como imágenes (asegúrate de que los archivos PNG estén en la misma carpeta) */
+.happy {
+    background-image: url('happy.png');
+}
+
+.neutral {
+    background-image: url('neutral.png');
+}
+
+.angry {
+    background-image: url('angry.png');
+}
+
+
+.hidden {
+    display: none;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    text-align: left;
+}
+
+.stat-item p {
+    margin: 0;
+}
+
+/* Estilos para los emojis de texto en la sección de estadísticas */
+.emoji-stat {
+    font-size: 40px; 
+}
+
+.happy-stat::before {
+    content: "😊"; /* Emoji feliz */
+    color: #28a745;
+}
+.neutral-stat::before {
+    content: "😐"; /* Emoji neutral */
+    color: #ffc107;
+}
+.angry-stat::before {
+    content: "😠"; /* Emoji enojado */
+    color: #dc3545;
+}
+
+/* Estilos para los botones de Reiniciar y Pantalla Completa */
+#resetButton, #fullscreenButton { 
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#resetButton:hover, #fullscreenButton:hover {
+    background-color: #0056b3;
+}
+
+#fullscreenButton {
+    background-color: #28a745; /* Color diferente para distinguirlo visualmente */
+}
+
+#fullscreenButton:hover {
+    background-color: #218838;
+}

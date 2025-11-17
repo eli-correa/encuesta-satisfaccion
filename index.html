@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Satisfacción</title>
+    <!-- Vincula el archivo CSS para el estilo -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Opcional: Para una Progressive Web App (PWA), descomenta la siguiente línea y crea tu manifest.json -->
+    <!-- <link rel="manifest" href="/manifest.json"> -->
+</head>
+<body>
+    <!-- Contenedor de la interfaz de la encuesta (pregunta y caritas) -->
+    <div class="container" id="surveyContainer">
+        <h1>¿Cómo ha sido tu experiencia de compra con nosotros?</h1>
+        <div class="emojis">
+            <!-- Botón para la carita feliz (utiliza happy.png) -->
+            <button class="emoji happy" data-satisfaction="happy" aria-label="Muy satisfecho"></button>
+            <!-- Botón para la carita neutral (utiliza neutral.png) -->
+            <button class="emoji neutral" data-satisfaction="neutral" aria-label="Neutral"></button>
+            <!-- Botón para la carita enojada (utiliza angry.png) -->
+            <button class="emoji angry" data-satisfaction="angry" aria-label="Insatisfecho"></button>
+        </div>
+        <!-- El mensaje de "¡Gracias por tu calificación!" se inserta aquí dinámicamente con JavaScript -->
+    </div>
+
+    <!-- Contenedor de la interfaz de estadísticas (oculto por defecto) -->
+    <div class="stats-container hidden" id="statsContainer">
+        <h1>Estadísticas de Satisfacción</h1>
+        <div class="stats-grid">
+            <!-- Sección para mostrar el conteo y porcentaje de satisfacción feliz -->
+            <div class="stat-item">
+                <span class="emoji happy-stat"></span> <!-- Emoji de texto para la estadística -->
+                <p>Muy Satisfechos: <span id="happyCount">0</span> (<span id="happyPercentage">0%</span>)</p>
+            </div>
+            <!-- Sección para mostrar el conteo y porcentaje de satisfacción neutral -->
+            <div class="stat-item">
+                <span class="emoji neutral-stat"></span> <!-- Emoji de texto para la estadística -->
+                <p>Neutrales: <span id="neutralCount">0</span> (<span id="neutralPercentage">0%</span>)</p>
+            </div>
+            <!-- Sección para mostrar el conteo y porcentaje de satisfacción enojada -->
+            <div class="stat-item">
+                <span class="emoji angry-stat"></span> <!-- Emoji de texto para la estadística -->
+                <p>Insatisfechos: <span id="angryCount">0</span> (<span id="angryPercentage">0%</span>)</p>
+            </div>
+            <!-- Sección para mostrar el total de votos -->
+            <div class="stat-item">
+                <p>Total de Votos: <span id="totalVotes">0</span></p>
+            </div>
+        </div>
+        <!-- Botón para reiniciar todos los conteos de la encuesta -->
+        <button id="resetButton">Reiniciar Encuesta</button>
+        <!-- Botón para activar el modo de pantalla completa y la interfaz de encuesta -->
+        <button id="fullscreenButton" style="margin-top: 15px;">Iniciar Encuesta (Pantalla Completa)</button>
+    </div>
+
+    <!-- Vincula el archivo JavaScript para la lógica interactiva -->
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Satisfacción</title>
+    <!-- Vincula el archivo CSS para el estilo -->
+    <link rel="stylesheet" href="style.css">
+    <!-- NUEVO: Enlaza el archivo manifest.json para la PWA -->
+    <link rel="manifest" href="manifest.json"> 
+</head>
+<body>
+    <!-- ... el resto de tu código HTML ... -->
+    <script src="script.js"></script>
+</body>
+</html>
